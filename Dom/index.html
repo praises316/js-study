@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with elements</title>
+</head>
+<body>
+    <div id="div-One">This text has been created and added dynamically.</div>
+
+
+
+<script>
+    function seeCreatedElement () {
+        let newDiv = document.createElement("div")
+
+        let newContent = document.createTextNode("Hello dear,greetings!")
+
+        newDiv.appendChild(newContent)
+
+        let currentDiv = document.getElementById("div-One")
+
+        document.body.insertBefore (newDiv,currentDiv)
+
+
+        // let expandingList = document.createElement("ul", {is:"expanding-list"})
+
+         let expandingList = document.createElement("ul")
+        
+         let lists = inner("you're loved")
+
+         expandingList.appendChild(lists)
+
+    }
+    seeCreatedElement()
+</script>
+
+
+</body>
+</html>
